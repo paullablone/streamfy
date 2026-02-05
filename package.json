@@ -1,0 +1,19 @@
+{
+  "name": "linkup-tv",
+  "version": "1.0.0",
+  "description": "LinkUp.TV - Live streaming platform with categories",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "npm run dev --workspace=backend",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "install:all": "npm install && npm install --workspace=backend && npm install --workspace=frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
